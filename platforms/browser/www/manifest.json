@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "MotardTrackerPitch",
+  "short_name": "MotardTrackerPitch",
+  "version": "com.motardtracker.pitch",
+  "description": "Brand new cordova project!",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html"
+}
