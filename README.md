@@ -24,11 +24,14 @@ npm run build
 
 ## Used libs & reference
 
-https://vuejs.org/
-https://vuejs.org/v2/guide/
+### VueJS
+* https://vuejs.org/
+* https://vuejs.org/v2/guide/
 
-https://framework7.io/
-https://framework7.io/vue/
+### Framework7
+* https://framework7.io/
+* https://framework7.io/vue/
 
-https://cordova.apache.org/
-https://cordova.apache.org/docs/en/latest/guide/cli/index.html
+### Cordova
+* https://cordova.apache.org/
+* https://cordova.apache.org/docs/en/latest/guide/cli/index.html
