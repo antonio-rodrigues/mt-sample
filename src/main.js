@@ -48,6 +48,11 @@ export default new Vue({
   framework7: {
     id: 'io.framework7.testapp',
     theme, // md or ios
+    panel: {
+      swipe: 'left',
+      leftBreakpoint: 768,
+      rightBreakpoint: 1440,
+    },
   },
   routes,
 });
