@@ -1,74 +1,49 @@
 <template>
-    <f7-page>
-        <f7-panel left reveal theme-dark>
-            <f7-view>
-                <f7-page theme-dark>
-                    <f7-block>Left panel</f7-block>
-                </f7-page>
-            </f7-view>
-        </f7-panel>
-
-        <!-- Main view -->
-        <f7-view main>
-            <f7-page color-theme="orange" class="mt-home">
-                <LayoutHome>
-                    <!--hero-->
-                    <div class="full-with" slot="hero">
-                        <div class="row mt-hspacing--m">
-                            <div class="col mt-vspacing--l"></div>
+    <f7-page color-theme="orange" class="mt-home">
+        <LayoutHome>
+            <div class="full-with" slot="hero">
+                <div class="row align-items-center mt-hspacing--m">
+                    <div class="col-15">
+                        <img class="mt-home--logo float-left" src="../../images/logo.png" />
+                    </div>
+                    <div class="col-65">
+                        <h3 class="mt-home--title">AROD'S TRACKER</h3>
+                    </div>
+                    <div class="col-20">
+                        <f7-button class="float-right mt-vspacing--xs mt-home--settings-icon" no-padding icon-f7="gear" icon-size="28px" icon-color="white"
+                            href="/settings/" />
+                    </div>
+                </div>
+                <div class="row align-items-center text-align-center">
+                    <div class="col mt-home--tracker">
+                        <div class="mt-home--tracker-container">
+                            <Tracker />
                         </div>
-                        <div class="row align-items-center text-align-center">
-                            <div class="col mt-home--tracker">
-                                <div class="mt-home--tracker-container">
-                                    <Tracker />
-                                </div>
-                                <div class="mt-home--tracker-date">
-                                    13-07-2018, 08:02
-                                </div>
-                                <div class="mt-home--tracker-mode mt-vspacing--s">
-                                    <f7-link href="/faq/operation-mode - smart/">
-                                        <f7-chip text="MODE: SMART" media-bg-color="red">
-                                            <f7-icon slot="media" f7="bolt_round_fill"></f7-icon>
-                                        </f7-chip>
-                                    </f7-link>
-                                </div>
-                            </div>
+                        <div class="mt-home--tracker-date">
+                            13-07-2018, 08:02
+                        </div>
+                        <div class="mt-home--tracker-mode mt-vspacing--s">
+                            <f7-link href="/faq/operation-mode - smart/">
+                                <f7-chip text="MODE: SMART" media-bg-color="red">
+                                    <f7-icon slot="media" f7="bolt_round_fill"></f7-icon>
+                                </f7-chip>
+                            </f7-link>
                         </div>
                     </div>
-                    <!--content-->
-                    <div class="full-with mt-home--container" slot="content">
-                        <div class="row align-items-center mt-home--content mt-hspacing--m mt-vspacing--m">
-                            <div class="col">
-                                <f7-button small icon-f7="graph_round" icon-size="18px" href="/status/">
-                                    <span>TRACKER EVENTS
-                                        <f7-icon class="mt-home--events-icon" f7="arrow_right" size="18px" color="blue"></f7-icon>
-                                    </span>
-                                </f7-button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <f7-card class="full-with mt-home--card">
-                                <f7-card-header class="no-border" valign="center">
-                                    LAST LOCATION
-                                    <f7-button class="float-right mt-home--refresh-map" small @click="showDeterminate(true)">
-                                        <f7-icon f7="refresh" size="18px" color="blue"></f7-icon>
-                                    </f7-button>
-                                </f7-card-header>
-                                <div id="maps-progress-bar"></div>
-                                <f7-card-content class="mt-home--map">
-                                    <GoogleMap :name="'Last Location'"></GoogleMap>
-                                </f7-card-content>
-                                <f7-card-footer>
-                                    <f7-button small icon-f7="navigation" icon-size="16px" href="/status/">
-                                        <span>History</span>
-                                    </f7-button>
-                                </f7-card-footer>
-                            </f7-card>
-                        </div>
+                </div>
+            </div>
+            <div class="full-with" slot="content">
+                <div class="row align-items-center mt-home--content mt-hspacing--m mt-vspacing--m">
+                    <div class="col">
+                        <f7-button big icon-f7="graph_round" icon-size="18px" href="/status/">
+                            <span>TRACKER EVENTS
+                                <f7-icon class="mt-home--events-icon" f7="arrow_right" size="18px" color="blue"></f7-icon>
+                            </span>
+                        </f7-button>
                     </div>
-                </LayoutHome>
-            </f7-page>
-        </f7-view>
+                </div>
+            </div>
+        </LayoutHome>
     </f7-page>
 </template>
 <script>
@@ -135,6 +110,7 @@
     @import '../../sass/globals.scss';
 
     .mt-home {
+        color: #color-smoke;
 
         &--title {
             color: $color-smoke;
@@ -163,8 +139,8 @@
             justify-content: space-around;
             align-items: center;
             text-align: center;
-            min-height: 45vh;
-            max-height: 45vh;
+            min-height: 40vh;
+            max-height: 40vh;
 
             &-container {
                 margin: 0 auto;
@@ -207,12 +183,11 @@
         }
 
         &--map {
-            border-radius: 0;
+            border-radius: $mt-border-radius;
             min-height: 80%;
-            padding: 0;
 
             >div {
-                border-radius: 0;
+                border-radius: $mt-border-radius;
                 height: 80%;
             }
         }
@@ -220,15 +195,10 @@
         & .card {
             margin: 0;
             height: 100%;
-            border-radius: 0;
 
             .google-map {
                 min-height: 18vh;
             }
-        }
-        
-        & .card-content-padding {
-            padding: 0;
         }
 
         @-webkit-keyframes slide-rotate-hor-bottom {

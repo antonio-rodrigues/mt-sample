@@ -1,6 +1,6 @@
 <template>
     <f7-page class="color-theme-orange">
-        <f7-navbar title="Settings" back-link="Back"></f7-navbar>
+        <f7-navbar title="Settings" sliding></f7-navbar>
         <div class="block block-strong">
             <p>Just try to fill the form below and then go to any other page, or even you may close this site, and when you
                 return here form fields will have kept your data.</p>

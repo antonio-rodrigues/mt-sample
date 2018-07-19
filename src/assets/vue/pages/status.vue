@@ -1,6 +1,7 @@
 <template>
     <f7-page class="color-theme-orange mt-status">
-        <f7-navbar title="STATUS" back-link="Back"></f7-navbar>
+        <!-- <f7-navbar title="STATUS" back-link="Back"></f7-navbar> -->
+        <f7-navbar title="STATUS" sliding></f7-navbar>
         <f7-block-title>Registered events</f7-block-title>
         <f7-list media-list>
           <f7-list-item link="/faq/geofence/" title="Geofence" subtitle="Fora da área de segurança GeoFence_HOME" text="13/07/2018 07:58:48">

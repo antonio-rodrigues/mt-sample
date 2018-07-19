@@ -35,8 +35,8 @@
         margin: 0 auto; */
 
         &--image {
-            max-height: 30%;
-            max-width: 30%;
+            max-height: 34%;
+            max-width: 34%;
             height: auto;
         }
 

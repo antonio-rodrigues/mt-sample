@@ -1,6 +1,6 @@
 <template>
     <f7-page class="color-theme-orange mt-faq">
-        <f7-navbar title="FAQS" back-link="Back"></f7-navbar>
+        <f7-navbar title="FAQS" back-link="Back" sliding></f7-navbar>
         <f7-block-title>
             <f7-icon class="mt-home--events-icon" f7="help" size="18px" color="blue"></f7-icon>
             WHAT IS: {{getFaqTitle()}}

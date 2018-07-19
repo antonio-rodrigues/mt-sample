@@ -1,6 +1,6 @@
 <template>
   <f7-page class="color-theme-orange">
-    <f7-navbar title="Messsages" back-link="Back"></f7-navbar>
+    <f7-navbar title="Messsages" sliding></f7-navbar>
 
     <f7-messagebar
       :placeholder="placeholder"
